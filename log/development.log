@@ -1,0 +1,1482 @@
+  [1m[35m (194.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (149.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5288427128707212630)[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to Books (20180419112801)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180419112801"]]
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to Subjects (20180419112805)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180419112805"]]
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-19 11:28:12.133334"], ["updated_at", "2018-04-19 11:28:12.133334"]]
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (23.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5288427128707212630)[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5288427128707212630)[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to Books (20180419112919)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (148.5ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying(32) NOT NULL, "price" float, "subject_id" integer, "description" text, "created_at" timestamp)[0m
+  ↳ db/migrate/20180419112919_books.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180419112919"]]
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to Subjects (20180419112921)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (138.8ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" bigserial primary key, "name" character varying)[0m
+  ↳ db/migrate/20180419112921_subjects.rb:4
+  [1m[36mSubject Create (0.9ms)[0m  [1m[32mINSERT INTO "subjects" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Physics"]]
+  ↳ db/migrate/20180419112921_subjects.rb:8
+  [1m[36mSubject Create (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Mathematics"]]
+  ↳ db/migrate/20180419112921_subjects.rb:9
+  [1m[36mSubject Create (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Chemistry"]]
+  ↳ db/migrate/20180419112921_subjects.rb:10
+  [1m[36mSubject Create (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Psychology"]]
+  ↳ db/migrate/20180419112921_subjects.rb:11
+  [1m[36mSubject Create (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Geography"]]
+  ↳ db/migrate/20180419112921_subjects.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180419112921"]]
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5288427128707212630)[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-04-19 17:06:43 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/akshay/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/akshay/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (5.8ms)
+Completed 200 OK in 79ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/list" for 127.0.0.1 at 2018-04-19 17:07:36 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/list"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-19 17:13:27 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/akshay/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/akshay/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2018-04-19 17:13:40 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/books/new" for 127.0.0.1 at 2018-04-19 17:13:49 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/books/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/books/list" for 127.0.0.1 at 2018-04-19 17:14:50 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/books/list"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:15:05 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 2151ms (Views: 2009.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/book" for 127.0.0.1 at 2018-04-19 17:15:17 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/book"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book/ne" for 127.0.0.1 at 2018-04-19 17:15:23 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/book/ne"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:15:26 +0530
+Processing by BookController#new as HTML
+Completed 406 Not Acceptable in 44ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionController::UnknownFormat (BookController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book/show" for 127.0.0.1 at 2018-04-19 17:15:38 +0530
+Processing by BookController#show as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book without an ID):
+  
+app/controllers/book_controller.rb:7:in `show'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:15:47 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:15:51 +0530
+Processing by BookController#new as HTML
+Completed 406 Not Acceptable in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (BookController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:15:59 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:31:34 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (166.3ms)
+Completed 200 OK in 187ms (Views: 175.0ms | ActiveRecord: 9.7ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:32:03 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dsMWHr77Pa+4q4G3K2D6bTJkYchjaoBOWiUQx461ULmNIOLAOLGXetBUwPTEupqgd9XVaaXKCT4Fkd3KDMFqxQ==", "books"=>{"title"=>"hcv1", "price"=>"250", "subject_id"=>"1", "description"=>"hcv"}, "commit"=>"Create"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "hcv1"], ["price", 250.0], ["subject_id", 1], ["description", "hcv"], ["created_at", "2018-04-19 12:02:03.837636"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 245ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:32:03 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:42:05 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:42:18 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"39jicKH3jyvS43ImwdoNIdjRyTzQaCIggzEfFTbQUCEkOxauJ70l/rocM2UuAG3snWB9nRbIq1DchdIYtKRqXQ==", "books"=>{"title"=>"hcv2", "price"=>"250", "subject_id"=>"1", "description"=>"asd"}, "commit"=>"Create"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "hcv2"], ["price", 250.0], ["subject_id", 1], ["description", "asd"], ["created_at", "2018-04-19 12:12:18.477791"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (33.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 41ms (ActiveRecord: 35.6ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:42:18 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:42:20 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:42:39 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QeHLQtQ/U0hO+k49jeZ1QdhUlPfzqBl5PtESVqZQyvG6Aj+cUnX5nSYFD35iPBWMneUgVjUIkAlhZd9bJCTwjQ==", "books"=>{"title"=>"chem1", "price"=>"100", "subject_id"=>"3", "description"=>"afsjjsj\r\n"}, "commit"=>"Create"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (1.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "chem1"], ["price", 100.0], ["subject_id", 3], ["description", "afsjjsj\r\n"], ["created_at", "2018-04-19 12:12:39.734185"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 88ms (ActiveRecord: 37.4ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:42:39 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:42:41 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:43:02 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XRRm6ZZo4CDm6IWKmGETVEV5M6KPt0zkK+nM0/zMFdSm95I3ECJK9Y4XxMl3u3OZAMiHA0kXxZR0XQHefrgvqA==", "books"=>{"title"=>"chem2", "price"=>"1000", "subject_id"=>"3", "description"=>"asd"}, "commit"=>"Create"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "chem2"], ["price", 1000.0], ["subject_id", 3], ["description", "asd"], ["created_at", "2018-04-19 12:13:02.401303"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 41ms (ActiveRecord: 34.5ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:43:02 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:43:04 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:43:15 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0q8myiEz5Qb5CmC5ioSIF3jeVu/qmIdjy/Tz2hZJ/J0pTNIUp3lP05H1IfplXujaPW/iTiw4DhOUQD7XlD3G4Q==", "books"=>{"title"=>"mat1", "price"=>"500", "subject_id"=>"2", "description"=>"asdfcc"}, "commit"=>"Create"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "mat1"], ["price", 500.0], ["subject_id", 2], ["description", "asdfcc"], ["created_at", "2018-04-19 12:13:15.940509"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (85.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 93ms (ActiveRecord: 86.9ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:43:16 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:43:18 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:43:29 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e3JhhNjM2buHEnb6uM8HQo3urr7zJhbV5cHfPza40qKAkZVaXoZzbu/tN7lXFWePyF8aHzWGn6W6dRIytMzo3g==", "books"=>{"title"=>"mat2", "price"=>"800", "subject_id"=>"2", "description"=>"asdff"}, "commit"=>"Create"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "mat2"], ["price", 800.0], ["subject_id", 2], ["description", "asdff"], ["created_at", "2018-04-19 12:13:29.557017"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (53.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 62ms (ActiveRecord: 54.7ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:43:29 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:43:34 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:43:58 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DJDO54mXnuFuX4s4zASr3nKYi3+HfRlMjHVfca5qxVv3czo5D900NAagynsj3ssTNyk/3kHdkDzTwZJ8LB7/Jw==", "books"=>{"title"=>"psy1", "price"=>"300", "subject_id"=>"4", "description"=>"zxvv"}, "commit"=>"Create"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "psy1"], ["price", 300.0], ["subject_id", 4], ["description", "zxvv"], ["created_at", "2018-04-19 12:13:58.302517"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (36.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 43ms (ActiveRecord: 37.6ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:43:58 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:44:00 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:44:19 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3f4tlkhY5v9wFqW9b1Bo05Oj+S+1jSb4r7cW3ZeKGkQmHdlIzhJMKhjp5P6Aigge1hJNjnMtr4jwA9vQFf4gOA==", "books"=>{"title"=>"psy2", "price"=>"1500", "subject_id"=>"4", "description"=>"asgj"}, "commit"=>"Create"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (1.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "psy2"], ["price", 1500.0], ["subject_id", 4], ["description", "asgj"], ["created_at", "2018-04-19 12:14:19.393980"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (69.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 77ms (ActiveRecord: 71.9ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:44:19 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:44:21 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:44:31 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DfosYdwQqFWjUGNVb6HKIOrmtfh6dGhwXZQ7lY3mzxP2Gdi/WloCgMuvIhaAe6rtr1cBWbzU4QACIPaYD5L1bw==", "books"=>{"title"=>"geo1", "price"=>"50", "subject_id"=>"5", "description"=>"vmj,j,g"}, "commit"=>"Create"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "geo1"], ["price", 50.0], ["subject_id", 5], ["description", "vmj,j,g"], ["created_at", "2018-04-19 12:14:31.203121"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (42.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 51ms (ActiveRecord: 43.5ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:44:31 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:44:33 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/book/create" for 127.0.0.1 at 2018-04-19 17:44:54 +0530
+Processing by BookController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vi9PFbkCF4qN/f76fkSn3YigQp2/nh6inmDk4oEuqn9FzLvLP0i9X+UCv7mRnscQzRH2PHk+l9LB1CnvA1qQAw==", "books"=>{"title"=>"geo2", "price"=>"2000", "subject_id"=>"5", "description"=>"hdgkk"}, "commit"=>"Create"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "price", "subject_id", "description", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "geo2"], ["price", 2000.0], ["subject_id", 5], ["description", "hdgkk"], ["created_at", "2018-04-19 12:14:54.902966"]]
+  ↳ app/controllers/book_controller.rb:17
+  [1m[35m (76.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:17
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 85ms (ActiveRecord: 77.4ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:44:54 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book/show?id=4" for 127.0.0.1 at 2018-04-19 17:44:57 +0530
+Processing by BookController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:7
+Completed 406 Not Acceptable in 27ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UnknownFormat (BookController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:44:58 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/book/new" for 127.0.0.1 at 2018-04-19 17:46:26 +0530
+Processing by BookController#new as HTML
+  Rendering book/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/new.html.erb:12
+  Rendered book/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 17:46:27 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 19:05:32 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 626ms (Views: 600.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/book/show?id=1" for 127.0.0.1 at 2018-04-19 19:05:37 +0530
+Processing by BookController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:7
+  Rendering book/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book/show.html.erb:5
+  Rendered book/show.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 123ms (Views: 118.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 19:05:40 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book/show?id=4" for 127.0.0.1 at 2018-04-19 19:05:42 +0530
+Processing by BookController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:7
+  Rendering book/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/book/show.html.erb:5
+  Rendered book/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 19:05:43 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/book/show?id=6" for 127.0.0.1 at 2018-04-19 19:05:44 +0530
+Processing by BookController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:7
+  Rendering book/show.html.erb within layouts/application
+  [1m[36mSubject Load (3.2ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/book/show.html.erb:5
+  Rendered book/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 57ms (Views: 50.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 19:05:46 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book/show?id=9" for 127.0.0.1 at 2018-04-19 19:05:47 +0530
+Processing by BookController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:7
+  Rendering book/show.html.erb within layouts/application
+  [1m[36mSubject Load (2.6ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/book/show.html.erb:5
+  Rendered book/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 49ms (Views: 43.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 19:05:48 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/book/show?id=2" for 127.0.0.1 at 2018-04-19 20:07:02 +0530
+Processing by BookController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (9.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:7
+  Rendering book/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book/show.html.erb:5
+  Rendered book/show.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 548ms (Views: 505.3ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:07:06 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:08:32 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book/edit?id=1" for 127.0.0.1 at 2018-04-19 20:08:35 +0530
+Processing by BookController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:32
+  Rendering book/edit.html.erb within layouts/application
+  [1m[36mSubject Load (2.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/edit.html.erb:7
+  Rendered book/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:09:08 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:10:25 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book/delete?id=1" for 127.0.0.1 at 2018-04-19 20:10:28 +0530
+Processing by BookController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:53
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:53
+  [1m[36mBook Destroy (29.6ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/book_controller.rb:53
+  [1m[35m (30.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:53
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 301ms (ActiveRecord: 60.9ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:10:28 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:10:59 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book/delete?id=7" for 127.0.0.1 at 2018-04-19 20:11:04 +0530
+Processing by BookController#delete as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:53
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:53
+  [1m[36mBook Destroy (0.6ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/book_controller.rb:53
+  [1m[35m (32.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:53
+Redirected to http://localhost:3000/book/list
+Completed 302 Found in 38ms (ActiveRecord: 34.0ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:11:04 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:1
+  Rendered book/list.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:14:23 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/views/book/list.html.erb:2
+  Rendered book/list.html.erb within layouts/application (61.4ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Subject with 'id'=all):
+  
+app/views/book/list.html.erb:2:in `_app_views_book_list_html_erb__1768344111916207765_70106522980360'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:16:46 +0530
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/views/book/list.html.erb:2
+  Rendered book/list.html.erb within layouts/application (101.4ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 19.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Subject with 'id'=all):
+  
+app/views/book/list.html.erb:2:in `_app_views_book_list_html_erb___899158855116215230_69917980058080'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 20:25:42 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/application (83.4ms)
+Completed 200 OK in 858ms (Views: 833.6ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/book/show_subjects?id=1" for 127.0.0.1 at 2018-04-19 20:25:45 +0530
+Processing by BookController#show_subjects as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:58
+  Rendering book/show_subjects.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."subject_id" = $1[0m  [["subject_id", 1]]
+  ↳ app/views/book/show_subjects.html.erb:4
+  Rendered book/show_subjects.html.erb within layouts/application (101.3ms)
+Completed 200 OK in 140ms (Views: 136.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/book/show_subjects?id=4" for 127.0.0.1 at 2018-04-19 20:25:49 +0530
+Processing by BookController#show_subjects as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:58
+  Rendering book/show_subjects.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."subject_id" = $1[0m  [["subject_id", 4]]
+  ↳ app/views/book/show_subjects.html.erb:4
+  Rendered book/show_subjects.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/book/show_subjects?id=5" for 127.0.0.1 at 2018-04-19 20:25:52 +0530
+Processing by BookController#show_subjects as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:58
+  Rendering book/show_subjects.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."subject_id" = $1[0m  [["subject_id", 5]]
+  ↳ app/views/book/show_subjects.html.erb:4
+  Rendered book/show_subjects.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 23.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/book/show?id=10" for 127.0.0.1 at 2018-04-19 20:25:53 +0530
+Processing by BookController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:7
+  Rendering book/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/book/show.html.erb:5
+  Rendered book/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 69ms (Views: 65.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/book/show?id=10" for 127.0.0.1 at 2018-04-19 22:16:29 +0530
+Processing by BookController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:9
+  Rendering book/show.html.erb within layouts/standard
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/book/show.html.erb:5
+  Rendered book/show.html.erb within layouts/standard (40.6ms)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 13.8ms)
+
+
+  
+ActionView::Template::Error (The asset "style.css" is not present in the asset pipeline.):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb__361346722877077797_69917974098300'
+Started GET "/book/show_subjects?id=5" for 127.0.0.1 at 2018-04-19 22:18:08 +0530
+Processing by BookController#show_subjects as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:60
+  Rendering book/show_subjects.html.erb within layouts/standard
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."subject_id" = $1[0m  [["subject_id", 5]]
+  ↳ app/views/book/show_subjects.html.erb:4
+  Rendered book/show_subjects.html.erb within layouts/standard (7.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (The asset "style.css" is not present in the asset pipeline.):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb__361346722877077797_69917907326240'
+Started GET "/book/show_subjects?id=5" for 127.0.0.1 at 2018-04-19 22:18:11 +0530
+Processing by BookController#show_subjects as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:60
+  Rendering book/show_subjects.html.erb within layouts/standard
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."subject_id" = $1[0m  [["subject_id", 5]]
+  ↳ app/views/book/show_subjects.html.erb:4
+  Rendered book/show_subjects.html.erb within layouts/standard (2.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (The asset "style.css" is not present in the asset pipeline.):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb__361346722877077797_28379720'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 22:18:38 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/standard
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/standard (40.3ms)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 7.9ms)
+
+
+  
+ActionView::Template::Error (The asset "style.css" is not present in the asset pipeline.):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb__213347289792997329_70096925547660'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 22:26:09 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/standard
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/standard (8.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (The asset "style.css" is not present in the asset pipeline.):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb__213347289792997329_70096886326920'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 22:27:11 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/standard
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/standard (27.3ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 8.6ms)
+
+
+  
+ActionView::Template::Error (The asset "style.css" is not present in the asset pipeline.):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb__3005992822418219888_30055060'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 23:00:16 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/application (120.8ms)
+Completed 200 OK in 997ms (Views: 842.4ms | ActiveRecord: 53.1ms)
+
+
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 23:01:59 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/standard
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/standard (25.4ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (The asset "style.css" is not present in the asset pipeline.):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb__3005992822418219888_70292326082800'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 23:08:50 +0530
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/standard
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/standard (8.2ms)
+Completed 500 Internal Server Error in 909ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( style.css )` to `config/initializers/assets.rb` and restart your server):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb__3005992822418219888_70292241413180'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 23:11:00 +0530
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/standard
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/standard (39.3ms)
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 7.9ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( style.css )` to `config/initializers/assets.rb` and restart your server):
+     6:       <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+     7:       <meta http-equiv = "Content-Language" content = "en-us" />
+     8:       <title>Library Info System</title>
+     9:       <%= stylesheet_link_tag "style" %>
+    10:    </head>
+    11: 
+    12:    <body id = "library">
+  
+app/views/layouts/standard.html.erb:9:in `_app_views_layouts_standard_html_erb___4455216718148627292_69871607918300'
+Started GET "/book/list" for 127.0.0.1 at 2018-04-19 23:21:50 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/akshay/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookController#list as HTML
+  Rendering book/list.html.erb within layouts/standard
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/book/list.html.erb:2
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/book/list.html.erb:7
+  Rendered book/list.html.erb within layouts/standard (125.6ms)
+Completed 200 OK in 1156ms (Views: 1021.2ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/book/show_subjects?id=2" for 127.0.0.1 at 2018-04-19 23:22:22 +0530
+Processing by BookController#show_subjects as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:60
+  Rendering book/show_subjects.html.erb within layouts/standard
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."subject_id" = $1[0m  [["subject_id", 2]]
+  ↳ app/views/book/show_subjects.html.erb:4
+  Rendered book/show_subjects.html.erb within layouts/standard (123.3ms)
+Completed 200 OK in 212ms (Views: 127.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/book/show_subjects?id=4" for 127.0.0.1 at 2018-04-19 23:22:26 +0530
+Processing by BookController#show_subjects as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:60
+  Rendering book/show_subjects.html.erb within layouts/standard
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."subject_id" = $1[0m  [["subject_id", 4]]
+  ↳ app/views/book/show_subjects.html.erb:4
+  Rendered book/show_subjects.html.erb within layouts/standard (2.1ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/book/show_subjects?id=5" for 127.0.0.1 at 2018-04-19 23:22:29 +0530
+Processing by BookController#show_subjects as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/book_controller.rb:60
+  Rendering book/show_subjects.html.erb within layouts/standard
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."subject_id" = $1[0m  [["subject_id", 5]]
+  ↳ app/views/book/show_subjects.html.erb:4
+  Rendered book/show_subjects.html.erb within layouts/standard (3.2ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 1.0ms)
+
+
